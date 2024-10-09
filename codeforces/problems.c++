@@ -8,7 +8,25 @@ cin.tie(NULL);
     cin >> t;
     while(t--)
     {
-         
+         int n,a,b;
+         cin>>n>>a>>b;
+       
+        int cost1 = n*a;
+        int cost2 =INT_MAX;
+        int cost3 =INT_MAX;
+
+        if(n%2==0)
+        {
+            cost2 = (n/2) * b;
+        }
+
+        else{
+            cost3 = (n/2)*b + a;
+        }
+        
+        int final = min({cost1,cost2,cost3});
+        cout<<final<<endl;
+
     }
     return 0;
 }
